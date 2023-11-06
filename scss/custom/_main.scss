@@ -13,6 +13,7 @@ main{
 h2{
     font-size:1.25rem;
     text-transform: uppercase;
+    color:rgb(96, 52, 4);
 }
 p{
     font-size:.75rem;
@@ -32,6 +33,8 @@ h1{
 font-weight: 700;
 font-style: normal;
 font-size:1.25rem;
+color:rgb(96, 52, 4);
+
 
 }
 
@@ -39,15 +42,20 @@ font-size:1.25rem;
     color:orange;
 }
 h3{
-    color:#9C5407;
-    font-size:.8rem;
+    color:#654321;
+    font-size:1rem;
     text-transform:uppercase;
   
 }
 
+.desript{
+  font-size:1rem;
+}
 
-
-
+.labels{
+  color:#9C5407;
+font-family: "barricada-pro", serif;
+}
   .circle-list {
     list-style: none;
     padding: 0;
@@ -74,13 +82,64 @@ h3{
     left: -30px; /* Position the marker outside the text */
     font-weight: bold; /* Style the number */
   }
+  .clock-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: item;
+  }
+  
+  .clock-list li {
+    margin-left: 10px; /* Adjust the spacing between the marker and text */
+    position: relative;
+    padding-left: 0; /* Remove the default left padding */
+  }
+  .clock-list li::before{
+    content:attr(clock); /* This is necessary to generate the pseudo-element */
+    display: inline-block;
+    width: 16px; /* Adjust the width and height as needed */
+    height: 16px;
+    background: url('../images/clock.svg'); /* Replace 'clock.svg' with your SVG file path */
+    background-size: cover;
+    margin-right: 10px; 
+    vertical-align: middle;
+  }
+
+  .fork-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: item;
+  }
+  
+  .fork-list li {
+    margin-left: 10px; /* Adjust the spacing between the marker and text */
+    position: relative;
+    padding-left: 0; /* Remove the default left padding */
+  }
+  .fork-list li::before{
+    content:attr(clock); /* This is necessary to generate the pseudo-element */
+    display: inline-block;
+    width: 16px; /* Adjust the width and height as needed */
+    height: 16px;
+    background: url('../images/silverware.svg'); /* Replace 'clock.svg' with your SVG file path */
+    background-size: cover;
+    margin-right: 10px; 
+    vertical-align: middle;
+  }
+
+  .star-rating {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Display the list items in a flex container */
+  }
+  
+  .star-rating li {
+    display: inline-block; /* Display the list items inline */
+    margin-right: 5px; /* Adjust the spacing between the stars as needed */
+  }
+
+  
   a {
     text-decoration: none; /* Remove the underline */
     color: black; /* Set the link color to black */
   }
 
-  .clock{
-    background-image: url("/images/clock.svg");
-    height:20px;
-    width:20px;
-  }
